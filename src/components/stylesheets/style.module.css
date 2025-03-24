@@ -1,0 +1,22 @@
+.name {
+  border: none;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.header {
+  background-color: rgb(153, 153, 2);
+  text-align: center;
+  height: 100px;
+  padding: 10px;
+  font-size: 2rem;
+  box-shadow: 5px 5px 5px gray;
+}
+.form {
+  margin: 50px auto;
+  width: 50%;
+  height: 70px;
+  box-shadow: 0 5px 5px gray;
+  box-sizing: border-box;
+  padding: 20px;
+}
