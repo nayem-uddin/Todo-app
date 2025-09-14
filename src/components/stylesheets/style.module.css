@@ -14,9 +14,11 @@
 }
 .form {
   margin: 50px auto;
-  width: 50%;
+  width: fit-content;
   height: 70px;
   box-shadow: 0 5px 5px gray;
   box-sizing: border-box;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
 }

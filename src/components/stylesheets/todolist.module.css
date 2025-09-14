@@ -2,11 +2,14 @@
   background-color: darkgrey;
   border-radius: 5px;
   box-shadow: 0 5px 10px gray;
-  width: 50%;
+  max-width: 600px;
   margin: auto;
   box-sizing: border-box;
   padding: 10px;
   font-size: 2rem;
+  @media screen and (max-width: 500px) {
+    font-size: 1.5rem;
+  }
 }
 .item {
   background-color: blanchedalmond;
