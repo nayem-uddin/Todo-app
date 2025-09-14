@@ -1,13 +1,21 @@
 import { Form } from "./Form";
 import { TodoList } from "./TodoList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "./Footer";
 export const Todo = () => {
-  const [todoList, setTodos] = useState([]); // added this state to the parent as it is needed by both of the components
+  const [todoList, setTodos] = useState(
+    JSON.parse(localStorage.getItem("todos")) || []
+  );
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todoList));
+  }, [todoList]);
   return (
     <div>
       <Form todoList={todoList} setTodos={setTodos} />
-      <TodoList todoList={todoList} setTodos={setTodos} />
+      {todoList.length === 0 && <p className="notify">Todo list is empty</p>}
+      {todoList.length > 0 && (
+        <TodoList todoList={todoList} setTodos={setTodos} />
+      )}
       <Footer todoList={todoList} />
     </div>
   );

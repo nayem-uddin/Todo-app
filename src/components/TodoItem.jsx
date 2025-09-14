@@ -8,10 +8,9 @@ export default function TodoItem({ setTodos, todoList, todo }) {
     );
   }
   function deleteTodo(item) {
-    // console.log(`delete ${item}`);
     setTodos(todoList.filter((todoItem) => todoItem !== item));
   }
-  // next.textContent = status;
+
   return (
     <div className={`${styles.item} clearfix`}>
       <div
